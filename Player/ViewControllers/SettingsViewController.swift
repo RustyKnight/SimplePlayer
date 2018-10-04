@@ -22,4 +22,7 @@ class SettingsViewController: UIViewController {
     settingsImageView.image = Player.imageOfSettings(imageSize: CGSize(width: 200, height: 200), fill: UIColor.black)
   }
   
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .default
+  }
 }

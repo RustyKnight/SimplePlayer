@@ -153,6 +153,10 @@ class PageViewController: UIPageViewController, SegueHandler {
   @IBAction func unwindFromSetting(segue: UIStoryboardSegue) {
     
   }
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
 }
 
 // MARK: - UIPageViewControllerDataSource

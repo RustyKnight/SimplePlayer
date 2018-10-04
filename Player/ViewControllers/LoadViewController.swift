@@ -88,4 +88,8 @@ class LoadViewController: UIViewController, SegueHandler {
       controller.failureReason = failureReason
     }
   }
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .default
+  }
 }

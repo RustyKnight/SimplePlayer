@@ -31,4 +31,7 @@ class LoadFailedViewController: UIViewController {
     
   }
   
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .default
+  }
 }

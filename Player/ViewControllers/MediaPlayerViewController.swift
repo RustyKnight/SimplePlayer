@@ -77,7 +77,11 @@ class MediaPlayerViewController: UIViewController {
   func pause() {
     vlcMediaPlayer.pause()
   }
-
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
 }
 
 extension MediaPlayerViewController: VLCMediaPlayerDelegate {
