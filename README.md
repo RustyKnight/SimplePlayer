@@ -11,4 +11,5 @@ There are no video controls at this time, as this wasn't part of the intended te
 # Improvements
 
 * Hide the controls automatically after a specified period of time
+
   When the user taps the UI, the page controls and setting controls are showen/hidden.  In line with many other video players, it might be an idea to automatically hide the controls again after a specified period of time
