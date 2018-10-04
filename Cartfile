@@ -1,0 +1,6 @@
+binary "https://code.videolan.org/videolan/VLCKit/raw/master/Packaging/MobileVLCKit.json" ~> 3.1.4
+
+github "RustyKnight/JAHud" "master"
+github "RustyKnight/JAHudHydra" "master"
+github "RustyKnight/LogWrapperKit" "master"
+github "yahoojapan/SwiftyXMLParser"

@@ -1,0 +1,18 @@
+/* 
+  Localizations.strings
+  Player
+
+  Created by Shane Whitehead on 4/10/18.
+  Copyright © 2018 Shane Whitehead. All rights reserved.
+*/
+
+"General.text.ok" = "Ok";
+"General.text.cancel" = "Cancel";
+"General.text.yes" = "Yes";
+"General.text.no" = "No";
+
+"Load.hud.title" = "Finding avaliable cameras";
+"Load.hud.prompt" = "Please wait";
+
+"Failed.text.serviceFailed" = "Failed to load any cameras due to error";
+"Failed.text.noCameras" = "Could not find any cameras";
