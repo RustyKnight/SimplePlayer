@@ -121,13 +121,10 @@ public class Player : NSObject {
         bezierPath.fill()
     }
 
-    @objc dynamic public class func drawSettings(frame: CGRect = CGRect(x: 0, y: 0, width: 50, height: 50)) {
+    @objc dynamic public class func drawSettings(frame: CGRect = CGRect(x: 0, y: 0, width: 50, height: 50), fill: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
-
-        //// Color Declarations
-        let white = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
 
 
         //// Subframes
@@ -193,7 +190,40 @@ public class Player : NSObject {
         bezierPath.addCurve(to: CGPoint(x: group.minX + 0.65219 * group.width, y: group.minY + 0.50000 * group.height), controlPoint1: CGPoint(x: group.minX + 0.58405 * group.width, y: group.minY + 0.34783 * group.height), controlPoint2: CGPoint(x: group.minX + 0.65219 * group.width, y: group.minY + 0.41596 * group.height))
         bezierPath.addCurve(to: CGPoint(x: group.minX + 0.50000 * group.width, y: group.minY + 0.65217 * group.height), controlPoint1: CGPoint(x: group.minX + 0.65219 * group.width, y: group.minY + 0.58404 * group.height), controlPoint2: CGPoint(x: group.minX + 0.58405 * group.width, y: group.minY + 0.65217 * group.height))
         bezierPath.close()
-        white.setFill()
+        fill.setFill()
+        bezierPath.fill()
+    }
+
+    @objc dynamic public class func drawBack(frame: CGRect = CGRect(x: 0, y: 0, width: 50, height: 50)) {
+        //// General Declarations
+        // This non-generic function dramatically improves compilation times of complex expressions.
+        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+
+
+        //// Subframes
+        let surface1: CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.26000 + 0.5), y: frame.minY + fastFloor(frame.height * 0.05959 - 0.48) + 0.98, width: fastFloor(frame.width * 0.74060 + 0.47) - fastFloor(frame.width * 0.26000 + 0.5) + 0.03, height: fastFloor(frame.height * 0.94060 + 0.47) - fastFloor(frame.height * 0.05959 - 0.48) - 0.95)
+
+
+        //// surface1
+        //// Bezier Drawing
+        let bezierPath = UIBezierPath()
+        bezierPath.move(to: CGPoint(x: surface1.minX + 0.91390 * surface1.width, y: surface1.minY + 0.00002 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.85668 * surface1.width, y: surface1.minY + 0.01376 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 0.89228 * surface1.width, y: surface1.minY + 0.00037 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 0.87179 * surface1.width, y: surface1.minY + 0.00534 * surface1.height))
+        bezierPath.addLine(to: CGPoint(x: surface1.minX + 0.02438 * surface1.width, y: surface1.minY + 0.46779 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.02438 * surface1.width, y: surface1.minY + 0.53199 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + -0.00813 * surface1.width, y: surface1.minY + 0.48552 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + -0.00813 * surface1.width, y: surface1.minY + 0.51426 * surface1.height))
+        bezierPath.addLine(to: CGPoint(x: surface1.minX + 0.85668 * surface1.width, y: surface1.minY + 0.98602 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.93779 * surface1.width, y: surface1.minY + 0.99852 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 0.87748 * surface1.width, y: surface1.minY + 0.99790 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 0.90853 * surface1.width, y: surface1.minY + 1.00269 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.99729 * surface1.width, y: surface1.minY + 0.96607 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 0.96689 * surface1.width, y: surface1.minY + 0.99435 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 0.98965 * surface1.width, y: surface1.minY + 0.98194 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.97437 * surface1.width, y: surface1.minY + 0.92182 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 1.00493 * surface1.width, y: surface1.minY + 0.95010 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 0.99615 * surface1.width, y: surface1.minY + 0.93317 * surface1.height))
+        bezierPath.addLine(to: CGPoint(x: surface1.minX + 0.20092 * surface1.width, y: surface1.minY + 0.49989 * surface1.height))
+        bezierPath.addLine(to: CGPoint(x: surface1.minX + 0.97437 * surface1.width, y: surface1.minY + 0.07797 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.99306 * surface1.width, y: surface1.minY + 0.02769 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 0.99891 * surface1.width, y: surface1.minY + 0.06493 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 1.00639 * surface1.width, y: surface1.minY + 0.04498 * surface1.height))
+        bezierPath.addCurve(to: CGPoint(x: surface1.minX + 0.91390 * surface1.width, y: surface1.minY + 0.00002 * surface1.height), controlPoint1: CGPoint(x: surface1.minX + 0.97957 * surface1.width, y: surface1.minY + 0.01048 * surface1.height), controlPoint2: CGPoint(x: surface1.minX + 0.94820 * surface1.width, y: surface1.minY + -0.00051 * surface1.height))
+        bezierPath.close()
+        fillColor.setFill()
         bezierPath.fill()
     }
 
@@ -219,14 +249,24 @@ public class Player : NSObject {
         return imageOfFailed
     }
 
-    @objc dynamic public class func imageOfSettings(imageSize: CGSize = CGSize(width: 50, height: 50)) -> UIImage {
+    @objc dynamic public class func imageOfSettings(imageSize: CGSize = CGSize(width: 50, height: 50), fill: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
-            Player.drawSettings(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+            Player.drawSettings(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height), fill: fill)
 
         let imageOfSettings = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
         return imageOfSettings
+    }
+
+    @objc dynamic public class func imageOfBack(imageSize: CGSize = CGSize(width: 50, height: 50)) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
+            Player.drawBack(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+
+        let imageOfBack = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return imageOfBack
     }
 
 }

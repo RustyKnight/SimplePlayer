@@ -10,7 +10,14 @@ import Foundation
 import LogWrapperKit
 import Hydra
 
-class PageViewController: UIPageViewController {
+class PageViewController: UIPageViewController, SegueHandler {
+  
+  typealias SegueIdentifier = Segue
+  
+  enum Segue: String {
+    case settings = "Segue.settings"
+    case fromSettings = "Segue.fromSettings"
+  }
   
   var cameras: [Camera] = []
   
@@ -114,6 +121,7 @@ class PageViewController: UIPageViewController {
     settingsButton.setImage(image, for: [])
     settingsButton.setTitle(nil, for: [])
     settingsButton.translatesAutoresizingMaskIntoConstraints = false
+    settingsButton.addTarget(self, action: #selector(showSettings), for: .touchDown)
     view.addSubview(settingsButton)
 
     NSLayoutConstraint.activate([
@@ -138,6 +146,13 @@ class PageViewController: UIPageViewController {
       ])
   }
   
+  @objc func showSettings() {
+    performSegue(withIdentifier: Segue.settings, sender: self)
+  }
+  
+  @IBAction func unwindFromSetting(segue: UIStoryboardSegue) {
+    
+  }
 }
 
 // MARK: - UIPageViewControllerDataSource

@@ -51,6 +51,7 @@
 		70FBBF5821662D9D00A26A07 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBBF5721662D9D00A26A07 /* Player.swift */; };
 		70FBBF5A21662DF000A26A07 /* LoadFailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBBF5921662DF000A26A07 /* LoadFailedViewController.swift */; };
 		70FBBF5C21662EE900A26A07 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBBF5B21662EE900A26A07 /* SegueHandler.swift */; };
+		70FBBF6021664B6A00A26A07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBBF5F21664B6A00A26A07 /* SettingsViewController.swift */; };
 		70FC30642165BD200047F259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC30632165BD200047F259 /* AppDelegate.swift */; };
 		70FC30662165BD200047F259 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC30652165BD200047F259 /* MediaPlayerViewController.swift */; };
 		70FC30692165BD200047F259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FC30672165BD200047F259 /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 		70FBBF5721662D9D00A26A07 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		70FBBF5921662DF000A26A07 /* LoadFailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFailedViewController.swift; sourceTree = "<group>"; };
 		70FBBF5B21662EE900A26A07 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		70FBBF5F21664B6A00A26A07 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		70FC30602165BD200047F259 /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FC30632165BD200047F259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FC30652165BD200047F259 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				70FBBF2E21661B4300A26A07 /* LoadViewController.swift */,
 				70FC30652165BD200047F259 /* MediaPlayerViewController.swift */,
 				70FBBF2C216615C300A26A07 /* PageViewController.swift */,
+				70FBBF5F21664B6A00A26A07 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				70FBBF4621661CDC00A26A07 /* String+Trim.swift in Sources */,
 				70FBBF3A21661C6200A26A07 /* String+Localization.swift in Sources */,
 				70FBBF5821662D9D00A26A07 /* Player.swift in Sources */,
+				70FBBF6021664B6A00A26A07 /* SettingsViewController.swift in Sources */,
 				70FBBF4B21661E8200A26A07 /* Device.swift in Sources */,
 				70FC30662165BD200047F259 /* MediaPlayerViewController.swift in Sources */,
 				70FBBF3821661C2200A26A07 /* Strings.swift in Sources */,

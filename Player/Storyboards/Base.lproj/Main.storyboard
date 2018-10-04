@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d2L-Nd-92c">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="d2L-Nd-92c" customClass="LoadViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrx-4f-mkE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watcher" translatesAutoresizingMaskIntoConstraints="NO" id="fXJ-zy-qqS">
-                                <rect key="frame" x="233.5" y="87.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="d5u-1g-ttg"/>
                                     <constraint firstAttribute="height" constant="200" id="hjA-xs-yyJ"/>
@@ -46,11 +46,11 @@
             <objects>
                 <viewController id="GjR-g2-GtA" customClass="LoadFailedViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zxu-Q4-N7R">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4IB-mH-bX0">
-                                <rect key="frame" x="283.5" y="123.5" width="100" height="128.5"/>
+                                <rect key="frame" x="137.5" y="269.5" width="100" height="128.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-Jq-6oE">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -84,29 +84,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pca-Uo-ufS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="-1626"/>
+            <point key="canvasLocation" x="980" y="-1621"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="f5p-S5-XWd">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="PwG-ge-KVe" customClass="PageViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="PwG-ge-KVe" customClass="PageViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="DeS-nl-9VZ" kind="show" identifier="Segue.settings" id="Yke-7N-FhH"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0n-9o-z7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755" y="-866"/>
+            <point key="canvasLocation" x="982" y="-860"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="pZH-nx-YCs">
+            <objects>
+                <viewController id="DeS-nl-9VZ" customClass="SettingsViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s9y-7p-hzd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys2-Kk-nDC">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V63-tc-8mx"/>
+                                    <constraint firstAttribute="height" constant="200" id="aAe-18-g2A"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3Q-IA-0Cz">
+                                <rect key="frame" x="20" y="40" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Zb1-lz-hmk" kind="unwind" identifier="Segue.fromSettings" unwindAction="unwindFromSettingWithSegue:" id="B1j-A2-ecO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E3Q-IA-0Cz" firstAttribute="leading" secondItem="MNP-LI-wcf" secondAttribute="leading" constant="20" id="GwS-Ai-T3q"/>
+                            <constraint firstItem="ys2-Kk-nDC" firstAttribute="centerX" secondItem="s9y-7p-hzd" secondAttribute="centerX" id="MXu-ww-tWy"/>
+                            <constraint firstItem="E3Q-IA-0Cz" firstAttribute="top" secondItem="MNP-LI-wcf" secondAttribute="top" constant="20" id="Ohb-1j-DjE"/>
+                            <constraint firstItem="ys2-Kk-nDC" firstAttribute="centerY" secondItem="s9y-7p-hzd" secondAttribute="centerY" id="SHU-9t-Lk2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MNP-LI-wcf"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="E3Q-IA-0Cz" id="Va0-DH-Q7c"/>
+                        <outlet property="settingsImageView" destination="ys2-Kk-nDC" id="lpP-H5-sfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stX-d0-ipf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Zb1-lz-hmk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="-860"/>
         </scene>
         <!--Media Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MediaPlayer" id="BYZ-38-t0r" customClass="MediaPlayerViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJI-gh-QCb">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="k8u-Fx-bza">
-                                        <rect key="frame" x="323.5" y="177.5" width="20" height="20"/>
+                                        <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="753" y="-119"/>
+            <point key="canvasLocation" x="980" y="-113"/>
         </scene>
     </scenes>
     <resources>
