@@ -9,6 +9,7 @@
 import Foundation
 import LogWrapperKit
 import Hydra
+import MediaPlayer
 
 class PageViewController: UIPageViewController, SegueHandler {
   
@@ -25,6 +26,8 @@ class PageViewController: UIPageViewController, SegueHandler {
   
   var pageControl: UIPageControl = UIPageControl()
   var settingsButton: UIButton = UIButton()
+  
+//  var mediaButton: MPVolumeView!
   
   var controlsAreHidden: Bool = false
   
@@ -92,6 +95,7 @@ class PageViewController: UIPageViewController, SegueHandler {
     makeAnimation {
       self.pageControl.alpha = 0
       self.settingsButton.alpha = 0
+//      self.mediaButton.alpha = 0
     }
   }
   
@@ -101,6 +105,7 @@ class PageViewController: UIPageViewController, SegueHandler {
     makeAnimation {
       self.pageControl.alpha = 1
       self.settingsButton.alpha = 1
+//      self.mediaButton.alpha = 1
     }
   }
   
@@ -109,12 +114,27 @@ class PageViewController: UIPageViewController, SegueHandler {
   func controlsToFront() {
     view.bringSubviewToFront(pageControl)
     view.bringSubviewToFront(settingsButton)
+//    view.bringSubviewToFront(mediaButton)
   }
   
   func configureControls() {
     configureSettingsButton()
     configurePageControl()
+//    configureMediaButton()
   }
+  
+//  func configureMediaButton() {
+//    mediaButton = MPVolumeView()
+//    mediaButton.showsRouteButton = true
+//    mediaButton.showsVolumeSlider = false
+//    mediaButton.translatesAutoresizingMaskIntoConstraints = false
+//    view.addSubview(mediaButton)
+//
+//    NSLayoutConstraint.activate([
+//      view.safeTrailingAnchor.constraint(equalTo: mediaButton.trailingAnchor, constant: 24),
+//      view.safeBottomAnchor.constraint(equalTo: mediaButton.bottomAnchor, constant: 24)
+//      ])
+//  }
   
   func configureSettingsButton() {
     let image = Player.imageOfSettings(imageSize: CGSize(width: 50, height: 50))

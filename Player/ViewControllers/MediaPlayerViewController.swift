@@ -29,6 +29,11 @@ class MediaPlayerViewController: UIViewController {
     vlcMediaPlayer.delegate = self
     vlcMediaPlayer.drawable = movieView
     
+    // This needs more investigation, but at least it plays full screen
+    let buffer = UnsafeMutablePointer<Int8>(mutating: ("16:9" as NSString).utf8String!)
+    vlcMediaPlayer.videoAspectRatio = buffer
+    vlcMediaPlayer.videoCropGeometry = buffer
+    
     guard let camera = camera else {
       return
     }
